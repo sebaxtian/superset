@@ -14,9 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-# NOTE: First of all build the Docker image: docker build -t rpi-arm64/superset:latest-dev .
-x-superset-image: &superset-image rpi-arm64/superset:${TAG:-latest-dev}
+x-superset-image: &superset-image sebaxtian/superset-arm64:${TAG}
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
